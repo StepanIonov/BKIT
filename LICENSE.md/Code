@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите три целых коэффициента A, B, C");
+            int A, B, C;
+            double D, x1, x2;
+            while (!int.TryParse(Console.ReadLine(), out A)) { Console.WriteLine("Неверное значение A"); };
+            while (!int.TryParse(Console.ReadLine(), out B)) { Console.WriteLine("Неверное значение B"); };
+            while (!int.TryParse(Console.ReadLine(), out C)) { Console.WriteLine("Неверное значение C"); };
+
+            D = B*B-4*A*C;
+            x1 = (-B + Math.Sqrt(D)) / (2 * A);
+            x2 = (-B - Math.Sqrt(D)) / (2 * A);
+                if(D<0)
+                {
+                    Console.WriteLine("Корней нет");
+                }
+                else
+                    if (D == 0)
+                    {
+                        Console.WriteLine("X=" + x1);
+                    }
+                    else
+                    {
+                        Console.WriteLine("X1=" + x1 + " " + "X2=" + x2);
+                    }
+
+
+
+
+            Console.ReadLine();
+        }
+    }
+}
