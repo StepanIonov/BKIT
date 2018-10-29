@@ -1,0 +1,12 @@
+namespace Lst
+{
+    public class SimpleListItem<T>
+    {
+        public T Data { get; set; }
+        public SimpleListItem<T> next { get; set; }
+        public SimpleListItem(T param)
+        {
+            Data = param;
+        }
+    }
+
